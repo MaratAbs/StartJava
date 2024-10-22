@@ -88,8 +88,8 @@ public class VariableNamesTheme {
         System.out.println("Окончание диапазона = " + endRange);
 
         // Полное имя работника месяца
-        String employeeName = "Иванов Иван Иванович";
-        System.out.println("Полное имя работника месяца: " + employeeName);
+        String nameEmployeeOfMonth = "Иванов Иван Иванович";
+        System.out.println("Полное имя работника месяца: " + nameEmployeeOfMonth);
 
         // Заголовок электронной книги
         String ebookTitle = "Энхиридион";
@@ -158,8 +158,8 @@ public class VariableNamesTheme {
         System.out.println("\n3. Аббревиатуры.");
 
         // Старый universally unique identifier
-        String universallyUniqueId = "UUID";
-        System.out.println("Старый universally unique identifier: " + universallyUniqueId);
+        String oldUniversallyUniqueId = "f81d4fae-7dec-11d0-a765-00a0c91e6bf6";
+        System.out.println("Старый universally unique identifier: " + oldUniversallyUniqueId);
 
         // Производитель оперативной памяти
         String ramVendor = "Samsung";
@@ -174,12 +174,12 @@ public class VariableNamesTheme {
         System.out.println("Протокол передачи гипертекста: " + http);
 
         // Сокращенный uniform resource locator
-        String networkAdress = "URL";
-        System.out.println("Сокращённый uniform resource locator: " + networkAdress);
+        String shortenedUrl = "bit.ly";
+        System.out.println("Сокращённый uniform resource locator: " + shortenedUrl);
 
         // Новый идентификатор клиента
-        String userIdentifier = "Идентификатор клиента";
-        System.out.println("Идентификатор клиента: " + userIdentifier);
+        String newClientId = "_ym_uid=14363376548734874281";
+        System.out.println("Идентификатор клиента: " + newClientId);
 
         // American standard code for information interchange
         String ascii = "ASCII";
