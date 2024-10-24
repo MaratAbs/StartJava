@@ -3,17 +3,17 @@ public class VariablesTheme {
         // ЗАДАНИЕ 1
         System.out.println("1. Вывод характеристик компьютера в консоль.\n");
         byte numberOfCore = 4;
-        short ram = 16;
+        short amountRam = 16;
         int ramClockFrequency = 8400;
         long cost = 100_000;
-        float frequencyProcessor = 3.5F;
+        float frequencyCpu = 3.5F;
         double weightMonitor = 3.7;
         boolean isIlluminate = true;
         System.out.println("Количество ядер в процессоре: " + numberOfCore);
-        System.out.println("Объём оперативной памяти: " + ram + " ГБ");
-        System.out.println("Тактовая частота оперативной памяти:" + ramClockFrequency + " МГц");
+        System.out.println("Объём оперативной памяти: " + amountRam + " ГБ");
+        System.out.println("Тактовая частота оперативной памяти: " + ramClockFrequency + " МГц");
         System.out.println("Стоимость ПК в руб.: " + cost);
-        System.out.println("Частота процессора: " + frequencyProcessor + " ГГц");
+        System.out.println("Частота процессора: " + frequencyCpu + " ГГц");
         System.out.println("Вес монитора в кг.: " + weightMonitor);
         System.out.println("Подсветка клавиатуры: " + isIlluminate + "\n");
 
@@ -22,18 +22,12 @@ public class VariablesTheme {
         double penPrice = 105.5;
         double bookPrice = 235.83;
         double percent = 0.11;
-
-        // Стоимость без скидки
-        double totalCost = (penPrice + bookPrice);
-
-        // Сумма скидки
-        double discount = (totalCost * percent);
-
-        // Стоимость со скидкой
-        double discountedCost = (totalCost - discount);
-        System.out.printf("Стоимость товара без скидки: %.2f руб.%n", totalCost);
-        System.out.printf("Сумма скидки: %.2f руб.%n", discount);
-        System.out.printf("Стоимость товара со скидкой: %.2f руб.%n%n", discountedCost);
+        double basePrice = (penPrice + bookPrice);
+        double discountAmount = (basePrice * percent);
+        double discountPrice = (basePrice - discountAmount);
+        System.out.printf("Стоимость товара без скидки: %.2f руб.%n", basePrice);
+        System.out.printf("Сумма скидки: %.2f руб.%n", discountAmount);
+        System.out.printf("Стоимость товара со скидкой: %.2f руб.%n%n", discountPrice);
 
         // ЗАДАНИЕ 3
         System.out.println("3. Вывод слова JAVA.\n");
@@ -48,6 +42,7 @@ public class VariablesTheme {
         short shortType = 32_767;
         int intType = 2_147_483_647;
         long longType = 9_223_372_036_854_775_807L;
+        char charType = 65_535;
         System.out.println("Максимальное значение типа byte: " + byteType + "\n" +
                 "Инкрементирование значения типа byte: " + (++byteType) + "\n" +
                 "Декрементирование значения типа byte: " + (--byteType));
@@ -59,7 +54,10 @@ public class VariablesTheme {
                 "Декрементирование значения типа int: " + (--intType));
         System.out.println("Максимальное значение типа long: " + longType + "\n" +
                 "Инкрементирование значения типа long: " + (++longType) + "\n" +
-                "Декрементирование значения типа long: " + (--longType + "\n"));
+                "Декрементирование значения типа long: " + (--longType));
+        System.out.println("Максимальное значение типа char: " + (int) charType + "\n" +
+                "Инкрементирование значения типа char: " + (int) (++charType) + "\n" +
+                "Декрементирование значения типа char: " + (int) (--charType) + "\n");
 
         // ЗАДАНИЕ 5
         System.out.println("5. Перестановка значений переменных.\n");
@@ -89,58 +87,50 @@ public class VariablesTheme {
         System.out.println("num1 = " + num1 + "\nnum2 = " + num2 + "\n");
 
         // ЗАДАНИЕ 6
+        System.out.println("6. Вывод символов и их кодов\n");
         char dollarSymbol = '$';
-        byte code36 = (byte) (dollarSymbol);
-
-        // Символ "звёздочка"
         char asterix = '*';
-        byte code42 = (byte) (asterix);
-
-        // Символ "собака"
         char commercialAt = '@';
-        byte code64 = (byte) (commercialAt);
-
-        // Вертикальная линия
         char verticalLine = '|';
-        byte code124 = (byte) (verticalLine);
-
-        // Символ "тильда"
         char tilde = '~';
-        byte code126 = (byte) (tilde);
-        System.out.println((code36) + "    " + dollarSymbol);
-        System.out.println((code42) + "    " + asterix);
-        System.out.println((code64) + "    " + commercialAt);
-        System.out.println((code124) + "   " + verticalLine);
-        System.out.println((code126) + "   " + tilde + "\n");
+        System.out.println((byte) (dollarSymbol) + "    " + dollarSymbol);
+        System.out.println((byte) (asterix) + "    " + asterix);
+        System.out.println((byte) (commercialAt) + "    " + commercialAt);
+        System.out.println((byte) (verticalLine) + "   " + verticalLine);
+        System.out.println((byte) (tilde) + "   " + tilde + "\n");
 
-        // 7. Вывод в консоль ASCII-арт Дюка
-        char symbol1 = '/';
-        char symbol2 = '\\';
-        char symbol3 = '_';
-        char symbol4 = '(';
-        char symbol5 = ')';
-        System.out.println("    " + symbol1 + symbol2);
-        System.out.println("   " + symbol1 + "  " + symbol2);
-        System.out.println("  " + symbol1 + symbol3 + symbol4 + " " + symbol5 + symbol2);
-        System.out.println(" " + symbol1 + "      " + symbol2);
-        System.out.println("" + symbol1 + symbol3 + symbol3 + symbol3 + symbol3 + symbol1 +
-                symbol2 + symbol3 + symbol3 + symbol2 + "\n");
+        // ЗАДАНИЕ 7
+        System.out.println("7. Вывод в консоль ASCII-арт Дюка\n");
+        char forwardSlash = '/';
+        char backSlash = '\\';
+        char underScore = '_';
+        char openingParenthesis = '(';
+        char closingParenthesis = ')';
+        System.out.println("    " + forwardSlash + backSlash);
+        System.out.println("   " + forwardSlash + "  " + backSlash);
+        System.out.println("  " + forwardSlash + underScore + openingParenthesis + " " +
+                closingParenthesis + backSlash);
+        System.out.println(" " + forwardSlash + "      " + backSlash);
+        System.out.println("" + forwardSlash + underScore + underScore + underScore +
+                underScore + forwardSlash + backSlash + underScore + underScore + backSlash + "\n");
 
-        // 8. Манипуляции с сотнями, десятками и единицами числа
+        // ЗАДАНИЕ 8
+        System.out.println("8. Манипуляции с сотнями, десятками и единицами числа\n");
         int num = 123;
         int hundreds = num / 100;
         int tens = num % 100 / 10;
-        int units = num % 10;
+        int ones = num % 10;
         System.out.printf("Число 123 содержит: %n  сотен -%2d%n  десятков -%2d%n  единиц -%2d%n",
-                 hundreds, tens, units);
-        System.out.println("Сумма разрядов = " + (hundreds + tens + units));
-        System.out.println("Произведение разрядов = " + (hundreds * tens * units + "\n"));
+                 hundreds, tens, ones);
+        System.out.println("Сумма разрядов = " + (hundreds + tens + ones));
+        System.out.println("Произведение разрядов = " + (hundreds * tens * ones + "\n"));
 
-        // 9. Перевод секунд в часы, минуты и секунды
+        // ЗАДАЧА 9
+        System.out.println("9. Перевод секунд в часы, минуты и секунды\n");
         int totalSeconds = 86399;
-        int hours = totalSeconds / 3600;
-        int minutes = (totalSeconds % 3600) / 60;
-        int seconds = totalSeconds % 60;
-        System.out.printf("%02d:%02d:%02d", hours, minutes, seconds);
+        int hh = totalSeconds / 3600;
+        int mm = (totalSeconds % 3600) / 60;
+        int ss = totalSeconds % 60;
+        System.out.printf("%02d:%02d:%02d", hh, mm, ss);
     }
 }
