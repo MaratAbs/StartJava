@@ -22,9 +22,9 @@ public class VariablesTheme {
         double penPrice = 105.5;
         double bookPrice = 235.83;
         double percent = 0.11;
-        double basePrice = (penPrice + bookPrice);
-        double discountAmount = (basePrice * percent);
-        double discountPrice = (basePrice - discountAmount);
+        double basePrice = penPrice + bookPrice;
+        double discountAmount = basePrice * percent;
+        double discountPrice = basePrice - discountAmount;
         System.out.printf("Стоимость товара без скидки: %.2f руб.%n", basePrice);
         System.out.printf("Сумма скидки: %.2f руб.%n", discountAmount);
         System.out.printf("Стоимость товара со скидкой: %.2f руб.%n%n", discountPrice);
@@ -101,18 +101,18 @@ public class VariablesTheme {
 
         // ЗАДАНИЕ 7
         System.out.println("7. Вывод в консоль ASCII-арт Дюка\n");
-        char forwardSlash = '/';
-        char backSlash = '\\';
-        char underScore = '_';
-        char openingParenthesis = '(';
-        char closingParenthesis = ')';
-        System.out.println("    " + forwardSlash + backSlash);
-        System.out.println("   " + forwardSlash + "  " + backSlash);
-        System.out.println("  " + forwardSlash + underScore + openingParenthesis + " " +
-                closingParenthesis + backSlash);
-        System.out.println(" " + forwardSlash + "      " + backSlash);
-        System.out.println("" + forwardSlash + underScore + underScore + underScore +
-                underScore + forwardSlash + backSlash + underScore + underScore + backSlash + "\n");
+        char slash = '/';
+        char backslash = '\\';
+        char underscore = '_';
+        char leftParenthesis = '(';
+        char rightParenthesis = ')';
+        System.out.println("    " + slash + backslash);
+        System.out.println("   " + slash + "  " + backslash);
+        System.out.println("  " + slash + underscore + leftParenthesis + " " +
+                rightParenthesis + backslash);
+        System.out.println(" " + slash + "      " + backslash);
+        System.out.println("" + slash + underscore + underscore + underscore +
+                underscore + slash + backslash + underscore + underscore + backslash + "\n");
 
         // ЗАДАНИЕ 8
         System.out.println("8. Манипуляции с сотнями, десятками и единицами числа\n");
