@@ -141,34 +141,33 @@ public class IfElseStatementTheme {
 
         // ЗАДАНИЕ 7
         System.out.println("\n7. Определение оценки по предметам\n");
-        double percentageGradeInHistory = 59;
-        double percentageGradeInProgramming = 92;
-        int gradeInHistory = 0;
-        int gradeInProgramming = 0;
-        if (percentageGradeInHistory <= 60) {
-            gradeInHistory = 2;
-        } else if (percentageGradeInHistory > 60 && percentageGradeInHistory <= 73) {
-            gradeInHistory = 3;
-        } else if (percentageGradeInHistory > 73 && percentageGradeInHistory <= 91) {
-            gradeInHistory = 4;
+        double historyPercentScore = 59;
+        double csPercentScore = 92;
+        int historyGrade = 0;
+        int csGrade = 0;
+        if (historyPercentScore <= 60) {
+            historyGrade = 2;
+        } else if (historyPercentScore > 60 && historyPercentScore <= 73) {
+            historyGrade = 3;
+        } else if (historyPercentScore > 73 && historyPercentScore <= 91) {
+            historyGrade = 4;
         } else {
-            gradeInHistory = 5;
+            historyGrade = 5;
         }
-        if (percentageGradeInProgramming <= 60) {
-            gradeInProgramming = 2;
-        } else if (percentageGradeInProgramming > 60 && percentageGradeInProgramming <= 73) {
-            gradeInProgramming = 3;
-        } else if (percentageGradeInProgramming > 73 && percentageGradeInProgramming <= 91) {
-            gradeInProgramming = 4;
+        if (csPercentScore <= 60) {
+            csGrade = 2;
+        } else if (csPercentScore > 60 && csPercentScore <= 73) {
+            csGrade = 3;
+        } else if (csPercentScore > 73 && csPercentScore <= 91) {
+            csGrade = 4;
         } else {
-            gradeInProgramming = 5;
+            csGrade = 5;
         }
-        double averageScore = (gradeInHistory + gradeInProgramming) / 2;
-        double averagePercentage = (percentageGradeInHistory + percentageGradeInProgramming) / 2;
-        System.out.println("История - " + gradeInHistory);
-        System.out.println("Программирование - " + gradeInProgramming);
-        System.out.println("Средний балл оценок по предметам: " + averageScore);
-        System.out.println("Средний процент баллов: " + averagePercentage);
+        System.out.println("История - " + historyGrade);
+        System.out.println("Программирование - " + csGrade);
+        System.out.println("Средний балл оценок по предмету: " + (historyGrade + csGrade) / 2F);
+        System.out.println("Средний процент баллов: " + 
+                      (historyPercentScore + csPercentScore) / 2F);
 
         // ЗАДАНИЕ 8
         System.out.println("\n8. Расчет годовой прибыли\n");
