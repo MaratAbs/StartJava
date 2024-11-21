@@ -16,7 +16,7 @@ public class IfElseStatementTheme {
             System.out.println("Гражданин считается несовершеннолетним.");
         }
 
-        double heightOfTheRecruit = 1.75;
+        double heightOfRecruit = 1.75;
         if (heightOfTheRecruit < 1.80) {
             System.out.println("Призывник может служить в танковых войсках.");
         } else {
@@ -125,7 +125,6 @@ public class IfElseStatementTheme {
         // ЗАДАНИЕ 7
         System.out.println("\n7. Определение оценки по предметам\n");
         double historyPercentScore = 59;
-        double csPercentScore = 92;
         int historyGrade = 5;
         if (historyPercentScore <= 60) {
             historyGrade = 2;
@@ -135,6 +134,7 @@ public class IfElseStatementTheme {
             historyGrade = 4;
         } 
         int csGrade = 5;
+        double csPercentScore = 92;
         if (csPercentScore <= 60) {
             csGrade = 2;
         } else if (csPercentScore > 60 && csPercentScore <= 73) {
@@ -154,10 +154,10 @@ public class IfElseStatementTheme {
         double monthlyRent = 5123.018;
         double monthlyProductionCosts = 9001.729;
         double annualProfit = (monthlySales - monthlyRent - monthlyProductionCosts) * 12;
-        if (annualProfit < 0 || annualProfit == 0) {
-            System.out.printf("Прибыль за год: %.2f%n", annualProfit);
-        } else if (annualProfit > 0) {
+        if (annualProfit > 0) {
             System.out.printf("Прибыль за год: %+.2f%n", annualProfit);
+        } else {
+            System.out.printf("Прибыль за год: %.2f%n", annualProfit);
         }
     }
 }
