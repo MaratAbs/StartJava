@@ -25,9 +25,9 @@ public class CyclesTheme {
         int number2 = 5;
         max = number1;
         min = number2;
-        if (number1 > number2) {
-            max = number1;
-            min = number2;
+        if (number1 < number2) {
+            min = number1;
+            max = number2;
         }
         int number3 = -1;
         if (number3 > max) {
@@ -77,15 +77,14 @@ public class CyclesTheme {
         currentNumber = originalNumber;
         int twosCount = 0;
         while (currentNumber > 0) {
-            int remainder = 0;
-            if ((remainder = currentNumber % 10) == 2) {
+            if ((currentNumber % 10) == 2) {
                 twosCount++;
             }
             currentNumber /= 10;
         }
         String state = (twosCount % 2 == 0) ? "чётное" : "нечётное";
-        System.out.println("В " + originalNumber + 
-                " " + state + " (" + twosCount + ") количество двоек");
+        System.out.println("В " + originalNumber + " " + state +
+                " (" + twosCount + ") количество двоек");
 
         // ЗАДАНИЕ 6
         System.out.println("\n6. Вывод геометрических фигур\n");
@@ -131,10 +130,10 @@ public class CyclesTheme {
         // ЗАДАНИЕ 7
         System.out.println("\n7. Вывод ASCII-символов\n");
         System.out.printf("%-10s%-13s%-3s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
-        for (int i = 33; i <= 122; i++) {
-            if ((i % 2 != 0) && (i <= 47)) {
+        for (int i = 33; i <= 122; i += 2) {
+            if (i <= 47) {
                 System.out.printf("  %-12d%-14c%-20s%n", i, i, Character.getName(i));
-            } else if ((i % 2 == 0) && (i >= 97) && (i <= 122)) {
+            } else if ((i >= 97) && (i <= 122)) {
                 System.out.printf("  %-12d%-14c%-20s%n", i, i, Character.getName(i));
             }
         }
