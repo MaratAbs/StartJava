@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
-        int randomNumber = 1 + (int) (Math.random() * 99 ) + 1;
+        int randomNumber = 1 + (int) (Math.random() * 99) + 1;
         System.out.println("Введите число в диапазоне от 1 до 100: ");
         while (true) {
             int playerNumber = new Scanner(System.in).nextInt();
