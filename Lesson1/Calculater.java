@@ -9,23 +9,23 @@ public class Calculater {
         char operation = console.next().charAt(0);
         System.out.print("Введите целое число: ");
         int num2 = console.nextInt();
-        int answer = 0;
+        int result = 0;
         if (operation == '+') {
-            answer = num1 + num2;
+            result = num1 + num2;
         } else if (operation == '-') {
-            answer = num1 - num2;
+            result = num1 - num2;
         } else if (operation == '*') {
-            answer = num1 * num2;
+            result = num1 * num2;
         } else if (operation == '/') {
-            answer = num1 / num2;
+            result = num1 / num2;
         } else if (operation == '%') {
-            answer = num1 % num2;
+            result = num1 % num2;
         } else if (operation == '^') {
-            answer = 1;
+            result = 1;
             for (int i = 1; i <= num2; i++) {
-                answer *= num1;
+                result *= num1;
             }
         }
-        System.out.printf("%d%2c%4d = %4d\n", num1, operation, num2, answer);
+        System.out.printf("%d%2c%4d = %4d\n", num1, operation, num2, result);
     }
 }
