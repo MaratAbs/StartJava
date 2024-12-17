@@ -3,7 +3,7 @@ public class Wolf {
     private String gender;
     private String name;
     private float weight;
-    private String age;
+    private int age;
     private String color;
 
     public String getGender() {
@@ -30,14 +30,13 @@ public class Wolf {
         this.weight = weight;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
-        int wolfAge = 0;
-        if ((wolfAge = Integer.valueOf(age)) > 8) {
-            this.age = "Некорректный возраст";
+    public void setAge(int age) {
+        if (age > 8) {
+            System.out.println("\nОшибка! Введён некорректный возраст.");
         } else {
             this.age = age;
         }
