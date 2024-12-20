@@ -6,16 +6,18 @@ public class CalculatorTest {
         Scanner console = new Scanner(System.in);
         String answer = "";
         do {
-            calculator.start();
-            while (!answer.contentEquals("yes") || !answer.equals("no")) {
+            System.out.print("Введите первое число: ");
+            calculator.setFirstNumber(console.nextInt());
+            System.out.print("Введите знак арифметической операции (+, -, *, /, ^, %): ");
+            calculator.setOperation(console.next().charAt(0));
+            System.out.print("Введите второе число: ");
+            calculator.setSecondNumber(console.nextInt());
+            calculator.calculate();
+            console.nextLine();
+            do {
                 System.out.print("Хотите продолжить вычисления? yes / no:  ");
                 answer = console.nextLine();
-                if (answer.equals("yes")) {
-                    break;
-                } else if (answer.equals("no")) {
-                    break;
-                }
-            }
+            } while (!answer.equals("yes") && !answer.equals("no"));
         } while (!"no".equals(answer));
     }
 }
