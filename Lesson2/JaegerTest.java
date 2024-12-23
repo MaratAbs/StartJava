@@ -1,7 +1,7 @@
-public class JeagerTest {
+public class JaegerTest {
 
     public static void main(String[] args) {
-        Jeager robot1 = new Jeager();        
+        Jaeger robot1 = new Jaeger();
         robot1.setModelName("Багровый Тайфун");
         robot1.setOrigin("Китай");
         robot1.setArming("Плазмотрон");
@@ -15,7 +15,7 @@ public class JeagerTest {
                 "Вес в тоннах: " + robot1.getWeight());
         robot1.run();
         robot1.fly();
-        Jeager robot2 = new Jeager("Страйкер Эврика", "Австралия", "Нагрудный гранатомёт",
+        Jaeger robot2 = new Jaeger("Страйкер Эврика", "Австралия", "Нагрудный гранатомёт",
                 76.2F, 6650F);
         System.out.println("\nИмя робота: " + robot2.getModelName() + "\n" + 
                 "Происхождение: " + robot2.getOrigin() + "\n" + 
