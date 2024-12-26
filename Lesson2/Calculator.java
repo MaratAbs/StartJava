@@ -32,10 +32,8 @@ public class Calculator {
                 if (secondNumber == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено!");
                     return;
-                } else {
-                    result = firstNumber / secondNumber;
                 }
-                break;
+                result = firstNumber / secondNumber;
             case '^':
                 result = 1;
                 for (int i = result; i <= secondNumber; i++) {
@@ -49,7 +47,6 @@ public class Calculator {
                 System.out.println("Ошибка! Операция " + operation + " не поддерживается.");
                 return;
         }
-        System.out.println("Результат вычисления: " + result);
-        return;
+        System.out.println("Результат вычисления: " + result); 
     }
 }
