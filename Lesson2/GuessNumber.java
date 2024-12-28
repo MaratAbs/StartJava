@@ -26,29 +26,29 @@ public class GuessNumber {
 
     public void compareFirstNumber() {
         System.out.print(p1.getName() + ", введи предполагаемое число: ");
-            playerNumber = console.nextInt();
-            if (playerNumber == randomNumber) {
-                System.out.println(" Победил(а) " + p1.getName() + "!");
-                return;
-            }
-            if (playerNumber > randomNumber) {
-                System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
-            } else {
-                System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
-            }
+        playerNumber = console.nextInt();
+        if (playerNumber == randomNumber) {
+            System.out.println(" Победил(а) " + p1.getName() + "!");
+            return;
+        }
+        if (playerNumber > randomNumber) {
+            System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
+        } else {
+            System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
+        }
     }
 
     public void compareSeconsNumber() {
         System.out.print(p2.getName() + ", введи предполагаемое число: ");
-            playerNumber = console.nextInt();
-            if (playerNumber == randomNumber) {
-                System.out.println(" Победил(а) " + p2.getName() + "!");
-                return;
-            }
-            if (playerNumber > randomNumber) {
-                System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
-            } else {
-                System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
-            }
+        playerNumber = console.nextInt();
+        if (playerNumber == randomNumber) {
+            System.out.println(" Победил(а) " + p2.getName() + "!");
+            return;
+        }
+        if (playerNumber > randomNumber) {
+            System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
+        } else {
+            System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
+        }
     }
 }
