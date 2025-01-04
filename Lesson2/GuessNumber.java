@@ -4,9 +4,7 @@ public class GuessNumber {
 
     private Player p1;
     private Player p2;
-    Scanner console = new Scanner(System.in);
-    int playerNumber;
-    int randomNumber;
+    private int randomNumber;
 
     public GuessNumber(Player p1, Player p2) {
         this.p1 = p1;
@@ -14,41 +12,35 @@ public class GuessNumber {
     }
 
     public void start() {
+        randomNumber = (int) (1 + Math.random() * 5);
         System.out.println("Угадай число от 1 до 100.");
-        randomNumber = (int) (1 + Math.random() * 10);
+        Scanner console = new Scanner(System.in);
         while (true) {
-            compareFirstNumber();
-            if (playerNumber == randomNumber) return;
-            compareSeconsNumber();
-            if (playerNumber == randomNumber) return;
+            System.out.print(p1.getName() + ", введи предполагаемое число: ");
+            int number = console.nextInt();
+            p1.setPlayerNumber(number);
+            boolean isEqualNumber = compareNumber(p1.getPlayerNumber());
+            if (isEqualNumber) break;
+
+            System.out.println(p1.getName() + ", введи предполагаемое число: ");
+            number = console.nextInt();
+            p2.setPlayerNumber(number);
+            isEqualNumber = compareNumber(p2.getPlayerNumber());
+            if (isEqualNumber) break;
         }
     }
 
-    public void compareFirstNumber() {
-        System.out.print(p1.getName() + ", введи предполагаемое число: ");
-        playerNumber = console.nextInt();
+    private boolean compareNumber(int playerNumber) {
         if (playerNumber == randomNumber) {
-            System.out.println(" Победил(а) " + p1.getName() + "!");
-            return;
+            System.out.println(" Ты победил(а)!");
+            return true;
         }
         if (playerNumber > randomNumber) {
             System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
+            return false;
         } else {
             System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
-        }
-    }
-
-    public void compareSeconsNumber() {
-        System.out.print(p2.getName() + ", введи предполагаемое число: ");
-        playerNumber = console.nextInt();
-        if (playerNumber == randomNumber) {
-            System.out.println(" Победил(а) " + p2.getName() + "!");
-            return;
-        }
-        if (playerNumber > randomNumber) {
-            System.out.println(" Число " + playerNumber + " больше, чем загаданное.");
-        } else {
-            System.out.println(" Число " + playerNumber + " меньше, чем загаданное.");
+            return false;
         }
     }
 }
