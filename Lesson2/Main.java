@@ -1,15 +1,40 @@
 public class Main {
 
     public static void main(String[] args) { 
-        NonBooleanMethod object1 = new NonBooleanMethod();
+        executeFirstMethodBlock();
+        executeSecondMethodBlock();
+    }
+
+    public static void executeFirstMethodBlock() {
+        NonBooleanMethod nonBm = new NonBooleanMethod();
         System.out.println("1. Не boolean-методы\n");
-        object1.executeFirstMethodBlock();
+        nonBm.findLongestWord();
+        nonBm.selectMenuItem();
+        nonBm.countNumberUiqueWords();
+        nonBm.displayErrorMessage();
+        nonBm.synchronizeData();
+        nonBm.restoreData();
+        nonBm.pauseFileDownload();
+        nonBm.resetToFactoryDefaults();
+        nonBm.writeContentsToFile();
+        nonBm.convertTemperature();
+        nonBm.enterMathExpression();
+        nonBm.determineWinner();
+        nonBm.findBookByAuthor();
+    }
 
-        BooleanMethod object2 = new BooleanMethod();
+    public static void executeSecondMethodBlock() {
+        BooleanMethod bm = new BooleanMethod();
         System.out.println("\n2. Boolean-методы\n");
-        object2.executeSecondMethodBlock();
-
-        System.out.println("\n3. Статический метод\n");
-        StaticMethod.method();
+        System.out.println(" " + bm.shouldTerminateProgram());
+        System.out.println(" " + bm.isDeletedFile());
+        System.out.println(" " + bm.hasUniqueDigit());
+        System.out.println(" " + bm.isEnteredLetter());
+        System.out.println(" " + bm.hasEqualDigits());
+        System.out.println(" " + bm.hasGameAttempts());
+        System.out.println(" " + bm.isEmptyLine());
+        System.out.println(" " + bm.isEvenNumber());
+        System.out.println(" " + bm.isValidFile());
+        System.out.println(" " + bm.isExistFile());
     }
 }
