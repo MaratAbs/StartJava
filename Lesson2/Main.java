@@ -1,11 +1,11 @@
 public class Main {
 
     public static void main(String[] args) { 
-        executeFirstMethodBlock();
-        executeSecondMethodBlock();
+        execNonBooleanMethods();
+        execBooleanMethods();
     }
 
-    public static void executeFirstMethodBlock() {
+    private static void execNonBooleanMethods() {
         NonBooleanMethod nonBm = new NonBooleanMethod();
         System.out.println("1. Не boolean-методы\n");
         nonBm.findLongestWord();
@@ -23,18 +23,18 @@ public class Main {
         nonBm.findBookByAuthor();
     }
 
-    public static void executeSecondMethodBlock() {
+    private static void execBooleanMethods() {
         BooleanMethod bm = new BooleanMethod();
         System.out.println("\n2. Boolean-методы\n");
-        System.out.println(" " + bm.shouldTerminateProgram());
-        System.out.println(" " + bm.isDeletedFile());
-        System.out.println(" " + bm.hasUniqueDigit());
-        System.out.println(" " + bm.isEnteredLetter());
-        System.out.println(" " + bm.hasEqualDigits());
-        System.out.println(" " + bm.hasGameAttempts());
-        System.out.println(" " + bm.isEmptyLine());
-        System.out.println(" " + bm.isEvenNumber());
-        System.out.println(" " + bm.isValidFile());
-        System.out.println(" " + bm.isExistFile());
+        System.out.println( bm.shouldTerminateProgram());
+        System.out.println( bm.isDeletedFile());
+        System.out.println( bm.hasUniqueDigit());
+        System.out.println( bm.isEnteredLetter());
+        System.out.println( bm.hasEqualDigits());
+        System.out.println( bm.hasGameAttempts());
+        System.out.println( bm.isEmptyLine());
+        System.out.println( bm.isEvenNumber());
+        System.out.println( bm.isValidFile());
+        System.out.println( bm.isExistFile());
     }
 }
