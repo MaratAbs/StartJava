@@ -26,15 +26,15 @@ public class Main {
     private static void execBooleanMethods() {
         BooleanMethod bm = new BooleanMethod();
         System.out.println("\n2. Boolean-методы\n");
-        System.out.println( bm.shouldTerminateProgram());
-        System.out.println( bm.isDeletedFile());
-        System.out.println( bm.hasUniqueDigit());
-        System.out.println( bm.isEnteredLetter());
-        System.out.println( bm.hasEqualDigits());
-        System.out.println( bm.hasGameAttempts());
-        System.out.println( bm.isEmptyLine());
-        System.out.println( bm.isEvenNumber());
-        System.out.println( bm.isValidFile());
-        System.out.println( bm.isExistFile());
+        System.out.println(bm.shouldTerminateProgram());
+        System.out.println(bm.isDeletedFile());
+        System.out.println(bm.hasUniqueDigit());
+        System.out.println(bm.isEnteredLetter());
+        System.out.println(bm.hasEqualDigits());
+        System.out.println(bm.hasGameAttempts());
+        System.out.println(bm.isEmptyLine());
+        System.out.println(bm.isEvenNumber());
+        System.out.println(bm.isValidFile());
+        System.out.println(bm.isExistFile());
     }
 }
