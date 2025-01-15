@@ -1,84 +1,61 @@
 public class BooleanMethod {
-    
-    public void executeSecondMethodBlock() {
-        System.out.println(" " + shouldTerminateProgram());
-        System.out.println(" " + isDeletedFile());
-        System.out.println(" " + hasUniqueDigit());
-        System.out.println(" " + hasEnteredLetter());
-        System.out.println(" " + hasEqualDigits());
-        System.out.println(" " + hasGameAttempts());
-        System.out.println(" " + isEmptyLine());
-        System.out.println(" " + isEvenNumber());
-        System.out.println(" " + isValidFile());
-        System.out.println(" " + isExistFile());
-    }
 
-    private boolean shouldTerminateProgram() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean shouldTerminateProgram() {
+        System.out.print(Method.revertName() + 
                 "() - программа выполняется далее или завершается?");
         return false;
     }
 
-    private boolean isDeletedFile() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isDeletedFile() {
+        System.out.print(Method.revertName() + 
                 "() - удалился ли файл на жестком диске или флешке?");
         return false;
     }
 
-    private boolean hasUniqueDigit() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean hasUniqueDigit() {
+        System.out.print(Method.revertName() + 
                 "() - последовательность содержит уникальную цифру?");
         return false;
     }
 
-    private boolean hasEnteredLetter() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isEnteredLetter() {
+        System.out.print(Method.revertName() + 
                 "() - пользователь ввел букву или что-то другое?");
         return false;
     }
 
-    private boolean hasEqualDigits() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean hasEqualDigits() {
+        System.out.print(Method.revertName() + 
                 "() - в проверяемых числах, есть равные цифры?");
         return false;
     }
 
-    private boolean hasGameAttempts() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean hasGameAttempts() {
+        System.out.print(Method.revertName() + 
                 "() - в игре \"Марио\" остались попытки?");
         return false;
     }
 
-    private boolean isEmptyLine() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isEmptyLine() {
+        System.out.print(Method.revertName() + 
                 "() - пользователь ввёл пустую строку или из одних пробелов?");
         return false;
     }
 
-    private boolean isEvenNumber() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isEvenNumber() {
+        System.out.print(Method.revertName() + 
                 "() - на кубике, который бросил компьютер, выпало четное число?");
         return false;
     }
 
-    private boolean isValidFile() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isValidFile() {
+        System.out.print(Method.revertName() + 
                 "() - путь до файла, который вы ищите на ssd, действительный?");
         return false;
     }
 
-    private boolean isExistFile() {
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        System.out.print(stackTrace[1].getMethodName() + 
+    public boolean isExistFile() {
+        System.out.print(Method.revertName() + 
                 "() - файл по указанному адресу существует?");
         return false;
     }
